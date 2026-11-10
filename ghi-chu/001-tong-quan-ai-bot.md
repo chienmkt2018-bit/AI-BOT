@@ -36,8 +36,10 @@ AI-BOT/
 ```
 
 ## Ranh giới phạm vi
-- Các tệp bộ nhớ mô tả và quản lý tri thức; không chứng minh bot đã tự động đọc/ghi chúng.
-- Không thay đổi chức năng bot trong nhiệm vụ khởi tạo bộ nhớ.
+- `bot.py` đã được cập nhật để đọc 6 tệp bộ nhớ qua GitHub Contents API khi cần gọi AI; nội dung được cache trong một lượt chạy.
+- Bộ nhớ được đưa vào prompt dưới dạng dữ liệu tham khảo, không phải chỉ thị hệ thống có quyền vượt yêu cầu hiện tại.
+- Bot chặn lệnh tạo/sửa tệp đối với `PROJECT_MEMORY.md`, `dang-lam.md` và toàn bộ `ghi-chu/`.
+- Đây là tích hợp đọc ngữ cảnh; bot chưa tự thực hiện quy trình POS/POSB để đề xuất, duyệt hoặc dọn bộ nhớ.
 - Khi chỉ quản lý bộ nhớ, không tự sửa README, bot.py hoặc workflow.
 
 ## Cần xác minh lại
