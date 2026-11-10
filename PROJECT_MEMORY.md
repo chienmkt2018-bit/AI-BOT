@@ -23,7 +23,7 @@
 2. Soạn ghi chú và cập nhật mục lục/trạng thái nếu cần.
 3. Trình bày tệp và diff để người dùng xem.
 4. Chỉ ghi GitHub khi người dùng phê duyệt rõ hoặc trực tiếp yêu cầu thực hiện ghi trong yêu cầu hiện tại.
-POS là quy trình quản lý, không có nghĩa đã tích hợp tự động vào `bot.py`.
+Bot hiện đã được tích hợp khả năng nạp bộ nhớ dự án theo chế độ chỉ đọc vào ngữ cảnh AI. Tuy nhiên, quy trình POS/POSB (đề xuất, duyệt, kiểm toán và cập nhật bộ nhớ) vẫn do người dùng/AI thực hiện theo yêu cầu; không tự động ghi hoặc dọn bộ nhớ.
 
 ## POSB — kiểm toán bộ nhớ
 1. Đọc toàn bộ `ghi-chu/` và `dang-lam.md`.
