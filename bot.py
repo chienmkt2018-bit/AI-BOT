@@ -98,9 +98,9 @@ def commit_file(path, content, message):
     raw_path = path.replace("\\", "/")
     if raw_path.startswith("/") or any(part == ".." for part in raw_path.split("/")):
         return False, "Đường dẫn không hợp lệ hoặc có traversal."
-    normalized = posixpath.normpath(raw_path).lstrip("./").casefold()
+    normalized = posixpath.normpath(raw_path).casefold()
     protected_memory = (
-        normalized in {"project_memory.md", "dang-lam.md"}
+        normalized in {"project_memory.md", "dang-lam.md", "ghi-chu"}
         or normalized.startswith("ghi-chu/")
     )
     blocked = [".github/workflows", ".env", "secrets", ".git/"]
