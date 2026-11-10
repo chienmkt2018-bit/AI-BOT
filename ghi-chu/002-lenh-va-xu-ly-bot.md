@@ -19,7 +19,10 @@ Bot cũng xử lý tin nhắn thông thường theo luồng chat trong `bot.py`.
 - Mã bot tích hợp GitHub API/GitHub Models.
 - Có danh sách đường dẫn bị chặn đối với thao tác tệp, gồm khu vực workflow, `.env`, secrets và `.git/`.
 - Thao tác tạo/sửa tệp có thể tạo commit lên nhánh đích theo logic bot; cần kiểm tra mã hiện hành trước khi sử dụng.
-- Không suy diễn rằng bot hỗ trợ POS/POSB tự động chỉ vì các tệp bộ nhớ đã được thêm.
+- Khi một lệnh cần gọi AI, bot nạp `PROJECT_MEMORY.md`, `dang-lam.md`, `ghi-chu/muc-luc.md` và ba ghi chú 001–003; nội dung tối đa 12.000 ký tự và cache trong một lượt chạy.
+- Bộ nhớ được gắn vào phần ngữ cảnh của lời gọi AI để bot hiểu trạng thái và quy ước dự án.
+- `commit_file()` từ chối đường dẫn `PROJECT_MEMORY.md`, `dang-lam.md`, `ghi-chu/` và đường dẫn traversal; việc cập nhật bộ nhớ phải thực hiện qua quy trình được người dùng yêu cầu/phê duyệt.
+- Tích hợp này không đồng nghĩa bot tự động tạo ghi chú, cập nhật mục lục hoặc chạy kiểm toán POSB.
 
 ## Quy tắc vận hành
 - Dùng `/help` để kiểm tra cú pháp hiện tại khi README hoặc mã thay đổi.
